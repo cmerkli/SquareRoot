@@ -1,7 +1,6 @@
-/*
- * Programmer:
- * Date:
- * Purpose: 
+/* Programmer: Cyntia Merkli
+ * Date: October 07 2020
+ * Purpose: Square root a number, and keep asking in number is negative
  */
 
 import java.text.DecimalFormat;
@@ -17,7 +16,11 @@ public class SquareRoot {
         double radicand = input.nextDouble();
 
         // Check that the input is not negative
-        // TODO: Change this part of the program to repeatedly error check
+        while (radicand < 0) {
+        	System.err.println("Invalid input!");
+        	System.err.print("Enter a number to square root: ");
+        	radicand = input.nextDouble();
+        }
         if (radicand < 0) {
             System.err.println("Invalid input!");
             System.exit(1);
